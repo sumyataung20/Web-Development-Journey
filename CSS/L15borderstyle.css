@@ -1,0 +1,30 @@
+.bdstyle {
+  border-style: solid;
+}
+.bdstyle2 {
+  border-style: double;
+}
+
+.bdstyle3 {
+  border-style: dotted;
+}
+
+.bdstyle4 {
+  border-style: dashed;
+}
+
+.bdstyle5 {
+  border-style: inset;
+}
+
+.bdstyle6 {
+  border-style: outset;
+}
+
+body {
+  background-image: url("../image/icon/icon1.png");
+  background-repeat: no-repeat;
+  /* background-position: center; */
+  background-attachment: fixed;
+  background-position: right top;
+}

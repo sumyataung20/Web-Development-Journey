@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      //for loop
+      let i = 0;
+      for (i; i < 10; i++) {
+        console.log(i);
+      }
+      console.log("this is i value from outside " + i);
+
+      for (var j = 5; j < 10; j++) {
+        console.log("j value is " + j);
+      }
+
+      for (let m = 0; m < 10; m++) {
+        if (m === 5) {
+          console.log("5 is my fav num");
+        }
+        console.log(m);
+      }
+
+      for (let k = 0; k < 10; k++) {
+        console.log(k);
+        if (k === 2) {
+          console.log("my fav number is " + k);
+          break;
+        }
+      }
+
+      for (var p = 0; p < 10; p++) {
+        if (p === 2) {
+          console.log(p + " is my fav number");
+          continue;
+        }
+        console.log(p);
+      }
+      console.log("this is p value from outside =" + p);
+
+      for (var q = 0; q < 10; q++) {
+        if (q === 2) {
+          console.log(q + "is my fav number");
+          continue;
+        }
+        if (q === 5) {
+          console.log(q + "is my fav number");
+          break;
+        }
+        console.log(q);
+      }
+      console.log("this is q value from outside = " + q);
+
+      for (var s = 10; s > 0; s--) {
+        console.log(s);
+      }
+      console.log("outside value of s is " + s);
+
+      let myarrs = ["red", "green", "yellow", "blue"];
+      for (let w = 0; w < myarrs.length; w++) {
+        document.write(myarrs[w] + `<br/>`);
+      }
+
+      //for loop with object
+      const people = [
+        { name: "Hsu", age: 20 },
+        { name: "aungaung", age: 30 },
+        { name: "Hla Hla", age: 40 },
+      ];
+
+      console.log(people);
+
+      for (let A = 0; A < people.length; A++) {
+        document.write(
+          "Name = " + people[A].name + " \/ Age = " + people[A].age + "<br/>"
+        );
+      }
+
+      let students = {
+        name: "aung aung",
+        city: "Mandalay",
+        parent: "U Bo",
+      };
+
+      console.log(students.city);
+
+      for (key in students) {
+        // console.log(students[key]);
+        document.write(key + " = " + students[key] + "<br/>");
+      }
+
+      //for in loop with array
+      const ourteam = ["kyaw kyaw", "hsuhsu", "naingnaing", "maw maw"];
+
+      console.log(ourteam);
+      console.log(ourteam[3]);
+
+      for (abc in ourteam) {
+        console.log(abc);
+        console.log(ourteam);
+
+        document.write("for in loop result = " + ourteam[abc] + "<br/>");
+      }
+      //for in loop with strings
+      let bd = "Happy Birthday To You";
+      console.log(bd);
+
+      for (key in bd) {
+        console.log(key);
+        document.write(bd[key] + "<br/>");
+      }
+
+      //for of loop (array)
+      document.write("<h3> For Of Loop</h3>");
+      const members = ["su su", "lu lu", "nu nu", " yu yu ", "mya mya"];
+      for (member of members) {
+        console.log(member);
+        document.write("for of loop result = " + member + "<br/>");
+      }
+
+      let greeting = "Hello mg";
+      for (val of greeting) {
+        document.write(val + "<br/>");
+      }
+
+      //while loop
+
+      let b = 0;
+
+      while (b < 10) {
+        console.log("Number b value is = " + b);
+        b++;
+      }
+
+      console.log("b outside value is = " + b);
+
+      let c = 0;
+
+      while (c < 10) {
+        c++;
+        console.log("Number c value is = " + c);
+      }
+
+      console.log(" c outside value is = " + c);
+
+      let myColors = [
+        "red",
+        "green",
+        "black",
+        "grey",
+        "blue",
+        "pink",
+        "yellow",
+      ];
+      console.log(myColors);
+
+      let k = 0;
+      while (k < myColors.length) {
+        document.write(myColors[k] + "<br/>"); // console.log(myColors[k]);
+
+        k++;
+      }
+
+      let laptops = [{ cpu: "core i5", ram: "8gb", hdd: "1tb" }];
+
+      console.log(laptops);
+      console.log(laptops[0].cpu);
+
+      let e = 0;
+
+      while (e < laptops.length) {
+        document.write(
+          "cpu is = " +
+            laptops[e].cpu +
+            "<br/>" +
+            "ram is = " +
+            laptops[e].ram +
+            "<br/>" +
+            "hdd is = " +
+            laptops[e].hdd
+        );
+        e++;
+      }
+
+      //do while loop
+      let mm = 0;
+
+      do {
+        console.log("M result is = " + mm);
+        mm++;
+      } while (mm < 10);
+
+      let nn = 0;
+
+      do {
+        nn++;
+        console.log("The result is = " + nn);
+      } while (nn < 10);
+
+      let candyColors = [
+        "red",
+        "purple",
+        "orange",
+        "violet",
+        "black",
+        "white",
+        "green",
+        "pink",
+      ];
+
+      candyColors.forEach(function (candyColor) {
+        console.log(candyColor);
+      });
+
+      candyColors.forEach((candyColor, index) => {
+        document.write(
+          "index is = " + index + "color is = " + candyColor + "<br/>"
+        );
+      });
+
+      candyColors.forEach((candyColor, index, arr) => {
+        console.log(arr);
+      });
+
+      const visitors = ["ko sai", "m naw zaw", "aung aung ", "june", "july"];
+      console.log(visitors);
+
+      visitors.forEach(function (visitor) {
+        console.log(visitor);
+      });
+
+      visitors.map((visitor) => {
+        console.log(`map result = Mr.${visitor}`);
+        console.log(visitor);
+      });
+
+      const guys = visitors.map((name) => {
+        return ` Mr. ${name}`;
+      });
+      console.log(guys);
+
+      const myguys = visitors.forEach((name) => {
+        return ` Mr.${name}`;
+      });
+      console.log(myguys);
+
+      const users = [
+        { id: 1, name: "aung aung" },
+        { id: 2, name: "Su Su" },
+        { id: 3, name: "Mya mya" },
+      ];
+
+      console.log(users[1].name);
+
+      const getname = users.map((user) => {
+        return user.name;
+      });
+      console.log(getname);
+
+      const printname = users.map((user) => user.name);
+      console.log(printname);
+
+      users.map((user, idx) => {
+        document.write(
+          `Indexs is ${idx} = ID is ${user.id} and Name is ${user.name}` +
+            "<br/>"
+        );
+      });
+
+      const game = "Chess";
+      const winner = ["Mr.Tin", "Mr.June", "Ms.jult"];
+
+      const getresult = winner.map((winner, idx) => ({
+        name: winner,
+        sport: game,
+        prize: idx + 1,
+      }));
+      console.log(getresult);
+
+      //filter
+
+      const ages = [20, 21, 22, 23, 12, 13, 14, 15, 16, 17, 18, 19];
+
+      console.log(ages);
+
+      const getover18 = ages.filter((age) => {
+        return age >= 18;
+      });
+      console.log(getover18);
+    </script>
+  </body>
+</html>

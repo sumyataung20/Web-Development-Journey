@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .box {
+      width: 300px;
+      background: #f4f4f4;
+      padding: 10px;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    label {
+      display: block;
+      margin: 10px 0;
+    }
+
+    .btn {
+      width: 100%;
+      display: block;
+      padding: 10px;
+      background: darkblue;
+      color: white;
+      margin: 10px 0;
+    }
+  </style>
+  <body>
+    <div class="box">
+      <h3>Show Name = <span id="replacement">Test</span></h3>
+
+      <form>
+        <label for="firstname">First Name </label>
+        <input
+          type="text"
+          name="firstname"
+          id="firstname"
+          class="form-control"
+          autocomplete="off"
+          autofocus
+        />
+
+        <label for="lastname">Last Name </label>
+        <input
+          type="text"
+          name="lastname"
+          id="lastname"
+          class="form-control"
+          autocomplete="off"
+        />
+
+        <button type="button" class="btn" onclick="getdata()">Get Name</button>
+      </form>
+    </div>
+    <script type="text/javascript">
+      //Manual Function
+      function greet() {
+        console.log("Hello Myanmar");
+        console.log("Hello Thailand");
+      }
+
+      greet();
+      greet();
+
+      function hello() {
+        console.log("hello yangon");
+      }
+
+      hello();
+
+      function hello() {
+        console.log("Hello Mandalay");
+      }
+
+      function funone() {
+        console.log("i am function one");
+      }
+
+      function funtwo() {
+        funone();
+        console.log("i am function two");
+      }
+
+      function funthree() {
+        funtwo();
+        console.log("i am function three");
+      }
+
+      funone();
+      funtwo();
+      funthree();
+
+      //return
+      function funfour() {
+        console.log(4);
+      }
+
+      function funfive() {
+        console.log(5);
+      }
+
+      function funsix() {
+        const num1 = funfour();
+        const num2 = funfive();
+
+        const total = num1 + num2;
+        console.log(total);
+      }
+      funsix();
+
+      function funseven() {
+        return 7;
+      }
+
+      console.log(funseven());
+
+      //   var num1 = 200;
+
+      //   const num2 = 300;
+
+      function funeight() {
+        var num = 8;
+        return num;
+      }
+
+      funeight();
+      console.log(funeight());
+
+      function funnine() {
+        const num1 = funseven();
+        const num2 = funeight();
+
+        console.log(num1, num2);
+
+        var total = num1 + num2;
+        console.log(total);
+      }
+
+      funnine();
+
+      function test() {
+        const num1 = 100;
+        const num2 = 200;
+
+        const total = num1 + num2;
+
+        return "he he";
+      }
+
+      console.log(test());
+
+      //parameter function
+      function myfun1(city) {
+        // console.log("Hello " + city);
+        console.log(`Hello ${city}`);
+      }
+
+      myfun1("Yangon");
+      myfun1("Mandalay");
+
+      //default parameter
+
+      function myfun2(country = "Yangon") {
+        console.log(`Hello ${country}`);
+      }
+      myfun2();
+      myfun2("Myanmar");
+
+      //multi parameter
+
+      function multifun1(x, y, z) {
+        console.log(`x value is ${x} , y value is ${y} , z value is ${z}`);
+      }
+
+      multifun1(10);
+      multifun1(10, 20);
+      multifun1(10, 20, 30);
+      //   multifun1(10, 20, 30, 40);
+
+      function multifun2(x = 1, y = 2, z = 3) {
+        console.log(`x value is ${x}, y value is ${y} , z value is ${z}`);
+      }
+
+      function multifun3(x = 1, y = 2, z = 3) {
+        let result = x + y + z;
+        return result;
+      }
+      console.log(multifun3());
+
+      //constructor function
+
+      const confunone = new Function("j", "k", "l", "return j+k+l");
+
+      console.log(confunone(10, 20, 30));
+
+      console.log(confunone("10", "20", "30"));
+
+      //Nameless function
+
+      let annfunone = function (name, color) {
+        console.log(`My name is ${name} and I love ${color} color`);
+      };
+
+      annfunone("Hsu", "red");
+
+      //self-invoking function
+
+      (function () {
+        console.log("Hello Yangon");
+      })();
+
+      (function (name) {
+        console.log(`My name is ${name}`);
+      })("Hsu");
+
+      function getdata() {
+        var getfirstname = document.getElementById("firstname").value;
+        var getlastname = document.getElementById("lastname").value;
+
+        const getreplacename = document.getElementById("replacement");
+
+        // console.log(getreplacename);
+
+        getreplacename.innerHTML = `${getfirstname} ${getlastname}`;
+
+        document.getElementById("firstname").value = "";
+
+        document.getElementById("lastname").value = "";
+
+        document.getElementById("lastname").focus();
+      }
+    </script>
+  </body>
+</html>

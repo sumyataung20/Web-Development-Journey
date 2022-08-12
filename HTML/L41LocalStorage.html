@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Storage</title>
+  </head>
+  <body>
+    //Local Storage //crud
+    <script type="text/javascript">
+      //Store
+      localStorage.setItem("name", "Hsu");
+      localStorage.setItem("age", 20);
+      localStorage.setItem("city", "Yangon");
+
+      //update
+      localStorage.setItem("name", "Naing Naing");
+      localStorage.age = 30;
+
+      //Get
+      let getname1 = localStorage.getItem("name");
+      console.log(getname1);
+      console.log(typeof getname1);
+
+      let getage1 = localStorage.getItem("age");
+      console.log(getage1);
+      console.log(typeof getage1);
+
+      let getcity1 = localStorage.getItem("city");
+      console.log(getcity1);
+      console.log(typeof getcity1);
+
+      //Delete/Destroy
+
+      //   Method1 (destory single)
+      localStorage.removeItem("name");
+      localStorage.removeItem("age");
+
+      //Method2 (destroy all)
+
+      localStorage.clear();
+
+      //sessionStorage
+      sessionStorage.setItem("name", "Hsu");
+
+      //update
+      sessionStorage.setItem("name", "Naing");
+
+      //Delete
+      sessionStorage.removeItem("name");
+    </script>
+  </body>
+</html>

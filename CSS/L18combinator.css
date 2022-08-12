@@ -1,0 +1,86 @@
+* {
+  cursor: pointer;
+}
+/* div span p {
+  color: red;
+} */
+
+/* tag to class */
+/* div .address {
+  color: red;
+} */
+/* multi tag to class */
+/* div span .address {
+  color: red;
+} */
+
+/* multi tag to same class */
+
+/* div span small.name {
+  color: red;
+} */
+
+/* class to class */
+/* .money .currency {
+  color: red;
+} */
+
+/* Class to tag */
+/* .container p {
+  color: red;
+}
+
+.container b span {
+  color: red;
+} */
+
+/* Class to Class */
+/* .mobile.jpn {
+  color: red;
+}
+.mobile.cn {
+  color: red;
+}
+.mobile.us {
+  color: red;
+} */
+/* 
+class to same class */
+
+.vehicle .car.jpn {
+  color: red;
+}
+.vehicle .car.cn {
+  color: red;
+}
+.vehicle .car.us {
+  color: red;
+}
+/* class to tag by group selector */
+/* .div1 p,
+.div1 b {
+  color: red;
+}
+/* child selector */
+
+.div2 > p {
+  color: red;
+}
+
+/* Sibiling selector (2 type) */
+/* (i) General sibiling selector */
+
+/* .div4 + b {
+  color: red;
+} */
+
+.div7 ~ i {
+  color: blue;
+}
+
+/* 
+(ii) Adjacent sibiling selector */
+
+/* .div7 + p {
+  color: red;
+} */

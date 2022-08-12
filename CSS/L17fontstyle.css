@@ -1,0 +1,90 @@
+* {
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: "stick";
+  src: local("Stick-Regular"),
+    url("../LIBS/Fonts/Stick/Stick-Regular.ttf") format("woff");
+}
+/* body{
+  font-family: "Stick", sans-serif;}  */
+@font-face {
+  font-family: "abc";
+  src: local("AkayaKanadaka-Regular"),
+    url(../LIBS/Fonts/Akaya\ Kanada/AkayaKanadaka-Regular.ttf) format("woff");
+}
+
+.p1 {
+  font-family: stick;
+}
+
+.p2,
+.p3 {
+  font-family: "abc";
+}
+
+/* font-family: Arial, Century; */
+/* font-weight: bold; */
+/* font-weight: bolder; */
+/* font-weight: 200; */
+
+/* text-transform: uppercase;    */
+/* text-transform: lowercase; */
+.p4 {
+  text-transform: capitalize;
+  font-style: italic;
+  /* text-indent: 100px; */
+}
+@font-face {
+  font-family: "jk";
+  src: local(akayatelivigala),
+    url(../LIBS/Fonts/akayatelivigala/AkayaTelivigala-Regular.ttf)
+      format("woff");
+} 
+.p8 {
+  font-family: "jk";
+}
+.clickme {
+  text-decoration: none;
+}
+
+.clickme:visited {
+  color: green;
+}
+
+.clickme:hover {
+  color: red;
+  text-transform: uppercase;
+}
+.menutext {
+  font-family: Cambria;
+  background-color: green;
+  color: white;
+  text-decoration: none;
+  /* top bottom left right */
+  /* padding: 10px 30px; */
+  /* top  right bottom left */
+  /* padding: 10px 20px 30px 40px; */
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  border-radius: 10px;
+  transition: background-color 2s, color 5s;
+}
+.menutext:hover {
+  background-color: orange;
+  color: #000;
+}
+.imgdesign {
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  transition: all 1s;
+}
+
+.imgdesign:hover {
+  width: 100px;
+  height: 100px;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Type Composition</title>
+  </head>
+  <body>
+    <script>
+      let val;
+      val = "Hsu";
+      console.log(val);
+      console.log(typeof val);
+      console.log(val.length);
+
+      val = 20;
+      console.log(val);
+      console.log(typeof val);
+
+      val = 20 + 20;
+      const val1 = 20,
+        val2 = 20;
+      val = val1 + val2;
+
+      val = String(20 + 30);
+      console.log(val);
+
+      val = true;
+      console.log(String(val));
+      console.log(val);
+
+      val = Date();
+      console.log(val);
+      console.log(String(val));
+      console.log(typeof val);
+      console.log(val.length);
+
+      val = [1, 2, 3, 4, 5];
+      val = val.toString();
+      console.log(typeof val);
+      console.log(val.length);
+
+      //String to Number
+      val = "20";
+      val = +val;
+      console.log(val);
+      console.log(typeof val);
+
+      // val = Number(prompt("Enter Number"));
+      // console.log(typeof val);
+
+      val = 23.455;
+      console.log(val);
+      console.log(val.toFixed(2));
+      console.log(parseInt(val));
+      console.log(parseFloat(val));
+
+      val = true;
+      console.log(Number(val));
+      val = false;
+      console.log(Number(val));
+
+      val = "Hsu";
+      val = Array.from(val);
+      console.log(Array.isArray(val));
+      console.log(val);
+      val = 2;
+      console.log(Array.from(val));
+
+      val = true;
+      console.log(Array.from(val));
+
+      val = {
+        music: "rap",
+        singer: "JB",
+      };
+      console.log(Array.from(val));
+    </script>
+  </body>
+</html>

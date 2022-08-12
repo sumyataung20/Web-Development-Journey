@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      //array method
+      let arrcolors = ["black", "white", "orange", "tomato", "pink"];
+      console.log(arrcolors);
+      console.log(arrcolors.length);
+      console.log(arrcolors[3]);
+      console.log(arrcolors.indexOf("tomato"));
+
+      //character array in js
+
+      let myFriend = "Aung Kyaw Kyaw";
+      console.log(Array.isArray(arrcolors));
+      console.log(Array.isArray(myFriend));
+
+      console.log(arrcolors);
+      console.log("Array to String by toString = " + arrcolors.toString());
+      console.log("Array to String by join = " + arrcolors.join("*"));
+
+      const n = ["red", "black", "green", "silver"];
+      console.log(n);
+
+      // //add new value to the array
+      // n.push("gold");
+      // console.log(n);
+
+      // n.unshift("tomato");
+      // n.unshift("grey");
+      // console.log(n);
+
+      // n.shift();
+      // n.shift();
+      // console.log(n);
+
+      // n.pop();
+      // n.pop();
+      // console.log(n);
+
+      // //Remove only value
+      // delete n[2];
+      // console.log(n);
+      // console.log(n.length);
+      // console.log(n[2]);
+
+      let q = n.splice(2, 1);
+      console.log(q);
+
+      //ArrayConcat
+      let arr1 = ["mgmg", "kyaw kyaw", "Hsu"];
+      let arr2 = [100, 200, 300];
+      let arr3 = ["mango", "strawberry"];
+
+      console.log(arr1.concat(arr2));
+      console.log(arr2.concat(arr3));
+
+      console.log(...arr1, ...arr2);
+
+      //Array sorting
+
+      const arr4 = arr1.concat(arr2);
+      console.log(arr4);
+      console.log(arr4[3]);
+
+      //sort A to Z (sort() doesn't work in number)
+      console.log(arr4.sort());
+      console.log(arr4[3]);
+
+      // sort Z to A
+      console.log(arr4.reverse());
+
+      const arr5 = [12, 34, 56, 7, 89, 9, 0];
+      console.log(arr5.sort());
+
+      console.log(
+        arr5.sort((a, z) => {
+          return z - a;
+        })
+      );
+
+      // console.log(
+      //   arr5.sort((x, y) => {
+      //     return y - x;
+      //   })
+      // );
+    </script>
+  </body>
+</html>

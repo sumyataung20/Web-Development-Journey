@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Guess Project</title>
+
+    <style type="text/css">
+      body {
+        height: 100vh;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      input {
+        padding: 10px;
+        margin-bottom: 12px;
+      }
+
+      #game span {
+        display: block;
+        margin-bottom: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Number Guess Project</h1>
+      <p>
+        Guess a number between <span class="minnumber"></span> to
+        <span class="maxnumber"></span>
+      </p>
+
+      <div id="game">
+        <input
+          type="number"
+          name="guessnumber"
+          id="guessnumber"
+          class="guessnumber"
+          placeholder="Enter your guess number"
+        />
+        <input type="submit" class="btn" value="submit" />
+
+        <span id="message1"></span>
+        <span id="message2"></span>
+      </div>
+    </div>
+    <script type="text/javascript">
+      const minnum = document.querySelector(".minnumber");
+      maxnum = document.querySelector(".maxnumber");
+      getinput = document.querySelector("#guessnumber");
+      getbtn = document.querySelector(".btn");
+      message1 = document.querySelector("#message1");
+      message2 = document.querySelector("#message2");
+      getgame = document.querySelector("#game");
+
+      let min = 1;
+      max = 10;
+      gameleft = 3;
+      winningnum = randomnum(min, max);
+
+      minnum.textContent = min;
+
+      maxnum.textContent = max;
+
+      getbtn.addEventListener("click", function () {
+        let guess = parseInt(getinput.value);
+
+        if (guess < min || guess > max || isNaN(guess)) {
+          // console.log(`Please enter a number between ${min} to ${max}`);
+          // message2.textContent = `Please enter a number between ${min} to ${max}`;
+
+          setmessage2(`Please enter a number between ${min} to ${max}`, "red");
+        }
+
+        if (guess === winningnum) {
+          gameover(true, `You won !! ${winningnum} is correct`);
+        } else {
+          gameleft -= 1;
+        }
+        if (gameleft === 0) {
+          gameover(false, `You Lose !! The correct number is ${winningnum}`);
+        } else {
+          getinput.value = "";
+          getinput.style.borderColor = "red";
+          setmessage1(
+            `${guess} is not correct ! ${gameleft} guess left`,
+            "blue"
+          );
+        }
+      });
+
+      function setmessage1(msg, color) {
+        message1.textContent = msg;
+        message1.style.color = color;
+      }
+
+      function setmessage2(msg, color) {
+        message2.textContent = msg;
+        message2.style.color = color;
+
+        setTimeout(function () {
+          message2.textContent = "";
+        }, 2000);
+      }
+
+      function gameover(won, msg) {
+        let color;
+
+        won === true ? (color = "green") : (color = "red");
+
+        getinput.disabled = true;
+        getinput.style.borderColor = color;
+
+        setmessage1(msg, color);
+
+        getbtn.value = "play again";
+
+        getbtn.classList.add("playgain");
+      }
+
+      getgame.addEventListener("mouseup", function (e) {
+        if (e.target.className === "btn playgain") {
+          window.location.reload();
+        }
+      });
+
+      function randomnum(min, max) {
+        let getrdm = Math.floor(Math.random() * (max - min) + 1);
+        return getrdm;
+      }
+    </script>
+  </body>
+</html>

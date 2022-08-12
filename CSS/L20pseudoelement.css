@@ -1,0 +1,18 @@
+.paragraph::first-line {
+  color: violet;
+}
+
+.paragraph::selection {
+  background-color: peru;
+  color: #fff;
+}
+
+.paragraph::before {
+  content: "ABC";
+  font-size: 60px;
+}
+
+.paragraph::after {
+  content: "GEF";
+  font-size: 60px;
+}

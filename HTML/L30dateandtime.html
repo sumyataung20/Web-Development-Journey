@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Date and Time</title>
+  </head>
+  <body>
+    <div class="footer">
+      <small
+        >Copyright @
+        <span id="dimyear"
+          >Eleven Media Group Co. Ltd. All rights reserved</span
+        ></small
+      >
+    </div>
+    <script type="text/javascript">
+      console.log("hi");
+
+      let date = new Date();
+
+      console.log(date);
+      let getDate = date.getDate();
+      console.log(getDate);
+
+      let hour = date.getHours();
+      console.log(`this is ${hour}`);
+
+      let minute = date.getMinutes();
+      console.log(`this is ${minute}`);
+
+      let second = date.getSeconds();
+      console.log(`this is ${second}`);
+
+      let time = new Date().getTime();
+      console.log(time);
+
+      let now = Date.now();
+      console.log(now);
+
+      let month = date.getMonth();
+      console.log(month);
+
+      let day = date.getDay();
+      console.log(day);
+
+      let year = date.getFullYear();
+      console.log(year);
+
+      let utcYear = date.getUTCFullYear();
+      console.log(utcYear);
+
+      // document.getElementById("dimyear").textContent = utcyear;
+      let birthday = new Date("8-10-2003");
+      birthday = new Date("8-10-2003 11:00:00");
+      birthday = new Date("Aug 10 2003");
+      birthday = new Date("August 10 2003 11:00:00");
+      birthday = new Date("8/10/2005");
+      console.log(birthday);
+
+      birthday.setMonth(2);
+      birthday.setDate(12);
+      birthday.setFullYear(2003);
+
+      birthday.setHours(15);
+      birthday.setMinutes(30);
+      birthday.setSeconds(50);
+
+      console.log(birthday);
+    </script>
+  </body>
+</html>

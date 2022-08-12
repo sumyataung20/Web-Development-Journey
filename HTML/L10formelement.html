@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: violet;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Form</h3>
+    <form enctype="multipart/form-data">
+      <fieldset>
+        <legend>This is form &ast;</legend>
+        <label for="FirstName">Firstname</label>
+        <input
+          type="text"
+          id="firstname"
+          class="firstname"
+          autofocus
+          autocomplete="off"
+          placeholder="Enter your firstname"
+          required
+        />
+        <br />
+        <br />
+
+        <label for="lastname">LastName</label>
+        <input
+          type="text"
+          id="lastname"
+          class="lastname"
+          autocomplete="off"
+          placeholder="Enter your last name"
+          minlength="3"
+          maxlength="6"
+        />
+        <br /><br />
+
+        <label for="age">Age</label>
+        <input
+          type="number"
+          name="age"
+          id="age"
+          class=""
+          placeholder="Enter your age"
+          min="0"
+          max="99"
+          required
+        />
+
+        <br />
+        <br />
+
+        <label for="Email">Email</label>
+        <input
+          type="email"
+          id="email"
+          class="email"
+          autocomplete="off"
+          placeholder="Enter your email"
+        />
+        <br /><br />
+
+        <label for="password">Password</label>
+        <input
+          type="number"
+          id="password"
+          class="password"
+          autocomplete="off"
+          placeholder="Enter your password"
+        />
+        <br /><br />
+
+        <label>Gender</label>
+        <input type="radio" name="gender" id="genderm" class="" value="Male" />
+        <label for="genderm">Male</label>
+
+        <input
+          type="radio"
+          name="gender"
+          id="genderF"
+          class=""
+          value="Female"
+        />
+        <label for="genderF">Female</label>
+
+        <input type="radio" name="gender" id="gendero" class="" value="Other" />
+        <lebel for="gendero">Other</lebel>
+
+        <br /><br />
+
+        <label>Fruit</label>
+        <input type = "radio" name = "fruit" id = "ft1" class = "" value =
+        "apple"/ >
+        <label for="ft1">Apple</label>
+
+        <input type="radio" name="fruit" id="ft2" class="" value="orange" />
+        <label for="ft2">Orange</label>
+
+        <input type="radio" name="fruit" id="ft3" class="" value="mango" />
+        <label for="ft3">Mango</label>
+        <br /><br />
+
+        <label>Colour</label>
+
+        <input type="checkbox" name="colour" id="rd1" class="" value="red" />
+        <label for="rd1">Red</label>
+
+        <input type="checkbox" name="colour" id="pk1" class="" value="pink" />
+        <label for="pk1">Pink</label>
+
+        <input type="checkbox" name="colour" id="bl1" class="" value="blue" />
+        <label for="bl1">Blue</label>
+        <br /><br />
+
+        <label for="country">Citizen</label>
+        <select name="country" id="country">
+          <option value="mm">Myanmar</option>
+          <option value="TH">Thailand</option>
+          <option value="PPH">Phililippines</option>
+          <option value="IND">India</option>
+        </select>
+        <br /><br />
+        <lebel for="roll">Roll</lebel>
+        <select name="roll" id="roll" multiple>
+          <option value="ED">Editor</option>
+          <option value="MG">Manager</option>
+          <option value="St">Staff</option>
+          <option value="dr">directior</option>
+        </select>
+        <br /><br />
+        <label for="DOB">Date of birth</label>
+        <input type="Date" name="DOB" class="" />
+        <br /><br />
+        <label for="TimeBooking">Time-booking</label>
+        <input type="time" name="TimeBooking" id="TimeBooking" class="" />
+        <br /><br />
+        <label for="apt">Appointment</label>
+        <input type="datetime-local" name="apt" id="apt" class="" />
+        <br /><br />
+        <label for="volume">Volume</label>
+        <input
+          type="range"
+          name="volume"
+          id="volume"
+          class=""
+          value="0"
+          min="0"
+          max="100"
+          step="20"
+        />
+        <br /><br />
+        <label>Bio</label>
+        <textarea
+          name="bio"
+          id="bio"
+          class=""
+          rows="10"
+          placeholder="write something"
+        ></textarea>
+        <br /><br />
+
+        <label for="nrc">NRC</label>
+        <input
+          type="file"
+          name="nrc"
+          id="nrc"
+          class=""
+          capture="user"
+          accept="image/*"
+          multiple
+        />
+        <br /><br />
+
+        <label for="nrc">View Record</label>
+        <input
+          type="file"
+          name="nrc"
+          id="nrc"
+          class=""
+          capture="environment"
+          accept="video/*"
+          multiple
+        />
+
+        <label for="rollid">Roll</label>
+        <input
+          type="hidden"
+          name="rollid"
+          id="rollid"
+          class=""
+          capture="user"
+          accept="image/*"
+        />
+        <br /><br />
+
+        <input type="reset" name="reset" id="reset" class="" value="cancel"/ >
+
+        <input
+          type="submit"
+          name="register"
+          id="register"
+          class=""
+          value="register"
+        />
+
+        <button type="submit" name="login" id="login">Login</button>
+      </fieldset>
+    </form>
+  </body>
+</html>

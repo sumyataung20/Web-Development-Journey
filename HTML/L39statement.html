@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Statement</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      //Ternary Operator
+      //c1 > c2 ? true : false ;
+
+      const x = 100;
+      const y = 200;
+
+      console.log(x > y ? "Yes, it is true" : "No,it is false");
+      console.log(x < y ? "Yes, it is true" : "No, it is false");
+
+      const num1 = "2";
+      const num2 = 2;
+
+      document.write(
+        "equal to (==) result = " + (num1 == num2 ? "True" : "False") + "<br/>"
+      );
+
+      document.write(
+        "equal to (===) result = " +
+          (num1 === num2 ? "True" : "False") +
+          "<br/>"
+      );
+
+      document.write(
+        "not equal to (!=) result = " +
+          (num1 != num2 ? "True" : "False") +
+          "<br/>"
+      );
+
+      document.write(
+        "not equal to (!==) result = " +
+          (num1 !== num2 ? "True" : "False") +
+          "<br/>"
+      );
+
+      document.write(
+        "greater than  (> ) result = " +
+          (num1 > num2 ? "True" : "False") +
+          "<br/>"
+      );
+
+      document.write(
+        "greater than or equal  ( >= ) result = " +
+          (num1 >= num2 ? "True" : "False") +
+          "<br/>"
+      );
+
+      document.write(
+        "less than  ( < ) result = " +
+          (num1 < num2 ? "True" : "False") +
+          "<br/>"
+      );
+
+      document.write(
+        "less than or equal ( <= ) result = " +
+          (num1 <= num2 ? "True" : "False") +
+          "<br/>"
+      );
+
+      // let i = 50;
+      // if ((i = 50)) {
+      //   console.log("correct");
+      // }
+
+      const id = 30;
+      if (id == 30) {
+        console.log("correct");
+      } else {
+        console.log("incorrect");
+      }
+
+      if (id === "30") {
+        console.log("correct");
+      } else {
+        console.log("incorrect");
+      }
+
+      if (id != "30") {
+        console.log("correct");
+      } else {
+        console.log("incorrect");
+      }
+
+      if (id !== "30") {
+        console.log("correct");
+      } else {
+        console.log("incorrect");
+      }
+
+      //else if
+      const J = 100;
+      let K = 200;
+      if (J > K) {
+        console.log("J is greater than K");
+      } else if (J == K) {
+        console.log("J is equal to K");
+      } else {
+        console.log("J is less than K");
+      }
+
+      //switch statement
+      // switch(condition) {
+      //   case :
+      //   code to be executed;
+      //   break;
+      //   case :
+      //   code to be executed;
+      //   break;
+      //   case :
+      //   code to be executed;
+      //   break;
+      //   default:
+      //   code to be executed;
+      //   break;
+      // }
+
+      const color = "pink";
+      switch (color) {
+        case "white":
+          console.log("My fav color is not white");
+          break;
+
+        case "black":
+          console.log("My fav color is not black");
+          break;
+
+        case "red":
+          console.log("My fav color is not red ");
+          break;
+
+        default:
+          console.log("Try Again");
+          break;
+      }
+
+      let daycount = new Date().getDay();
+
+      let today;
+
+      switch (daycount) {
+        case 0:
+          today = "Sunday";
+          break;
+        case 1:
+          today = "Monday";
+          break;
+        case 2:
+          today = "Tuesday";
+          break;
+        case 3:
+          today = "Wednesday";
+          break;
+        case 4:
+          today = "Thursday";
+          break;
+        case 5:
+          today = "Friday";
+          break;
+        case 6:
+          today = "Saturday";
+          break;
+      }
+      document.write("today is " + today);
+
+      let p = 10;
+      let q = 50;
+
+      // q += p;
+      // console.log(q);
+      // console.log(p);
+
+      // q -= p;
+      // console.log(q);
+      // console.log(p);
+
+      // q *= p;
+      // console.log(q);
+      // console.log(p);
+
+      q %= p;
+      console.log(q);
+      console.log(p);
+
+      const username = prompt("Enter Username");
+      const password = prompt("Enter Password");
+
+      if (username === "aungaung" || password === "123456") {
+        console.log("welcome");
+      } else {
+        console.log("Try Again");
+      }
+    </script>
+  </body>
+</html>

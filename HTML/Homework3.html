@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .tr {
+        background-color: yellow;
+      }
+      .tr2 {
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <center><img src="./image/UEC.jpg" alt="#" /></center>
+    <center>
+      <p>
+        <u><b>Welcome To 2020 Election</b></u>
+      </p>
+    </center>
+    <center>Citizen ID: WDF7043</center>
+    <hr />
+
+    <center>
+      <table border="1">
+        <tr class="tr">
+          <th colspan="2">Election Form</th>
+        </tr>
+        <tr>
+          <td><b>Leader Name</b>:</td>
+          <td>
+            <input
+              type="text"
+              name="LN"
+              id="LN"
+              class=""
+              placeholder="Enter Leader Name"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><b>Your Name</b>:</td>
+          <td>
+            <input
+              type="text"
+              name="YN"
+              id="YN"
+              class=""
+              placeholder="Enter your Name"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><b>Email</b>:</td>
+          <td>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class=""
+              placeholder="Enter your email"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><b>Passcode</b>:</td>
+          <td>
+            <input
+              type="password"
+              name="ps"
+              id="ps"
+              class=""
+              placeholder="Enter your passcode"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><b>Parties:</b></td>
+          <td>
+            <input type="radio" name="pt" id="pt" class="" />
+            <label for="pt">NLD</label>
+            <input type="radio" name="pt" id="pt" class="" />
+            <label for="pt">USDP</label>
+            <input type="radio" name="pt" id="pt" class="" />
+            <label for="pt">PPP</label>
+          </td>
+        </tr>
+        <tr>
+          <td><b>Location:</b></td>
+          <td>
+            <select name="LO" id="LO">
+              <option value="LO" selected disabled>Choose City</option>
+              <option value="LO">Mandalay</option>
+              <option value="LO">Sagaing</option>
+              <option value="LO">Myitkyeener</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <input type="checkbox" />I accept all the regulation of election
+            community.
+          </td>
+        </tr>
+        <tr class="tr2">
+          <td colspan="2">
+            <button value="reset">Cancel</button>
+            <button value="submit">Submit</button>
+          </td>
+        </tr>
+      </table>
+    </center>
+    <hr />
+    <center>
+      <p>Already register! <a href="#">Click Here To Login</a></p>
+    </center>
+  </body>
+</html>

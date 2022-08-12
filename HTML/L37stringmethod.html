@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    /* #mm {
+      font-size: 100px;
+      color: red;
+    }
+    #th {
+      font-family: Arial;
+      color: blue;
+    } */
+  </style>
+  <body>
+    <div>
+      <h1 id="mm">Myanmar</h1>
+      <h1 id="th">Thailand</h1>
+    </div>
+    <script type="text/javascript">
+      let firstName = "mgmg";
+      let lastName = "kyaw";
+
+      //concatenate
+      //   let Name = firstName + lastName;
+      let Name = lastName.concat(firstName);
+      console.log(Name);
+
+      //append
+      let newName = (firstName += lastName);
+      console.log(newName);
+
+      //character Array
+      console.log(Name.length);
+      console.log(Name[2]);
+      console.log(Name[Name.length - 1]);
+      console.log(Name.charAt(2));
+
+      //includes
+
+      let fav = "my fav color is black";
+      console.log(fav);
+      console.log(fav.includes("black"));
+      console.log(fav.includes("bla"));
+      console.log(fav.includes("BLACK"));
+
+      //replace (old,new)
+
+      console.log(fav.replace("black", "blue"));
+      console.log(fav.replace("bla", "red"));
+      console.log(fav.replace("color", "parpar"));
+
+      //substring(index,length)
+
+      console.log(fav.substring(0, 10) + "...");
+      console.log(fav.substring(0, 10).concat("....."));
+
+      //changeCase
+      console.log(fav.toUpperCase());
+      console.log(fav.toLowerCase());
+
+      //Style
+      document.getElementById("mm").style.color = "yellow";
+      document.getElementById("th").style.fontSize = "100px";
+    </script>
+  </body>
+</html>

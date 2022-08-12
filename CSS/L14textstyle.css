@@ -1,0 +1,19 @@
+.text-align {
+  text-align: right;
+}
+
+.text-decoration {
+  text-decoration: line-through;
+}
+
+.a {
+  text-decoration: none;
+}
+
+.textline {
+  /* letter-spacing: 10px; */
+  line-height: 50px;
+}
+.text-shadow {
+  text-shadow: 5px 5px 5px red;
+}
